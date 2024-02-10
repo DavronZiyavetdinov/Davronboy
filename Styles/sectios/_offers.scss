@@ -1,0 +1,93 @@
+.offers {
+    h2 {
+        @include font(48px, 600, 72px, rgb(0, 0, 0));
+        text-align: center;
+        margin-top: 160px;
+    }
+
+    .optios {
+        width: 340px;
+        padding: 13px;
+        margin: 60px auto 40px auto;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 6px black;
+        border-radius: 10px;
+
+
+        span {
+            padding: 10px 24px;
+        }
+
+        span:first-child {
+            background-color: $primary;
+            color: #FFFFFF;
+            border-radius: 10px;
+        }
+    }
+
+    .card-contener {
+        @include flex($jc: space-between, $gap:20px);
+        padding-bottom: 160px;
+        .card {
+            width: 380px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 6px black;
+            border-radius: 50px;
+            padding: 25px;
+
+            .image-date {
+                @include flex($jc: space-between);
+
+                p {
+                    width: 0px;
+                    height: 0px;
+                    transform: rotate(90deg) translateX(-100px);
+                    white-space: nowrap;
+
+                    @include font(18px, 500, 27px, rgba(0, 0, 0, 0.5));
+                    letter-spacing: 0.5em;
+                }
+            }
+
+            .day-night {
+                padding: 20px;
+
+                span:first-child {
+                    @include font(14px, 500, 21px, $secondary);
+                    background: #FCDDEC;
+                    border-radius: 100px;
+                    padding: 0 16px;
+                }
+
+                span:last-child {
+                    @include font(14px, 500, 21px, rgba(0, 0, 0, 0.5));
+                }
+            }
+
+            .title {
+                padding: 0 20px;
+                @include font(24px, 600, 36px);
+            }
+
+            .footer {
+                padding: 10px 20px 0 20px;
+                @include flex($jc: space-between);
+
+                .price {
+                    @include font(24px, 500, 36px);
+                    span {
+                        @include font(18px, 500, 27px, rgba(0, 0, 0, 0.5));
+                    }
+                }
+
+                button {
+                    background: #c6daff;
+                    border-radius: 10px;
+                    padding: 13px 19px;
+                    border: none;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
